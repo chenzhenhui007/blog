@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="深度克隆123456789101112131415function deepCopy(src,tar)&amp;#123;	var tar = tar || &amp;#123;&amp;#125;		//可传一个参，自建一个空对象来存数据	for(var prop in src)&amp;#123;		if(typeof(src[prop])===&apos;object&apos;)&amp;#123;			tar[prop] = (Object.pr">
+<meta name="description" content="深度克隆12345678910111213141516function deepCopy(src,tar)&amp;#123;	var tar = tar || &amp;#123;&amp;#125;		//可传一个参，自建一个空对象来存数据	for(var prop in src)&amp;#123;		if(typeof(src[prop])===&apos;object&apos;)&amp;#123;			tar[prop] = (Object.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="deepCopy">
 <meta property="og:url" content="http://yoursite.com/2018/06/14/deepCopy/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="深度克隆123456789101112131415function deepCopy(src,tar)&amp;#123;	var tar = tar || &amp;#123;&amp;#125;		//可传一个参，自建一个空对象来存数据	for(var prop in src)&amp;#123;		if(typeof(src[prop])===&apos;object&apos;)&amp;#123;			tar[prop] = (Object.pr">
+<meta property="og:description" content="深度克隆12345678910111213141516function deepCopy(src,tar)&amp;#123;	var tar = tar || &amp;#123;&amp;#125;		//可传一个参，自建一个空对象来存数据	for(var prop in src)&amp;#123;		if(typeof(src[prop])===&apos;object&apos;)&amp;#123;			tar[prop] = (Object.">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-06-14T15:53:02.212Z">
+<meta property="og:updated_time" content="2018-06-14T15:57:46.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="deepCopy">
-<meta name="twitter:description" content="深度克隆123456789101112131415function deepCopy(src,tar)&amp;#123;	var tar = tar || &amp;#123;&amp;#125;		//可传一个参，自建一个空对象来存数据	for(var prop in src)&amp;#123;		if(typeof(src[prop])===&apos;object&apos;)&amp;#123;			tar[prop] = (Object.pr">
+<meta name="twitter:description" content="深度克隆12345678910111213141516function deepCopy(src,tar)&amp;#123;	var tar = tar || &amp;#123;&amp;#125;		//可传一个参，自建一个空对象来存数据	for(var prop in src)&amp;#123;		if(typeof(src[prop])===&apos;object&apos;)&amp;#123;			tar[prop] = (Object.">
 
 
 
@@ -299,7 +299,7 @@
       
 
       
-        <h3 id="深度克隆"><a href="#深度克隆" class="headerlink" title="深度克隆"></a>深度克隆</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> deepCopy(src,tar)&#123;</span><br><span class="line">	var tar = tar || &#123;&#125;		//可传一个参，自建一个空对象来存数据</span><br><span class="line">	<span class="keyword">for</span>(var prop <span class="keyword">in</span> src)&#123;</span><br><span class="line">		<span class="keyword">if</span>(typeof(src[prop])===<span class="string">'object'</span>)&#123;</span><br><span class="line"></span><br><span class="line">			tar[prop] = (Object.prototype.toString.call(src[prop]) === <span class="string">'[object Array]'</span>?[]:&#123;&#125;)</span><br><span class="line"></span><br><span class="line">			deepCopy(src[prop],tar[prop])</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">			tar[prop]=src[prop]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> tar</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="深度克隆"><a href="#深度克隆" class="headerlink" title="深度克隆"></a>深度克隆</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> deepCopy(src,tar)&#123;</span><br><span class="line">	var tar = tar || &#123;&#125;		//可传一个参，自建一个空对象来存数据</span><br><span class="line">	<span class="keyword">for</span>(var prop <span class="keyword">in</span> src)&#123;</span><br><span class="line">		<span class="keyword">if</span>(typeof(src[prop])===<span class="string">'object'</span>)&#123;</span><br><span class="line"></span><br><span class="line">			tar[prop] = (Object.prototype.toString.call(src[prop]) ===</span><br><span class="line">			 <span class="string">'[object Array]'</span>?[]:&#123;&#125;)</span><br><span class="line"></span><br><span class="line">			deepCopy(src[prop],tar[prop])</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">			tar[prop]=src[prop]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> tar</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     

@@ -349,7 +349,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/06/13/js/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/06/13/js轮转片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen">
@@ -368,7 +368,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/06/13/js/" itemprop="url">js</a></h1>
+                <a class="post-title-link" href="/blog/2018/06/13/js轮转片/" itemprop="url">js</a></h1>
         
 
         <div class="post-meta">
@@ -421,35 +421,50 @@
         
           
             <h3 id="浏览器常驻的线程"><a href="#浏览器常驻的线程" class="headerlink" title="浏览器常驻的线程"></a>浏览器常驻的线程</h3><hr>
-<ul>
-<li>js引擎线程<blockquote>
+<p>js引擎线程</p>
+<blockquote>
 <p> 解释执行js代码、用户输入、网络请求</p>
 </blockquote>
-</li>
-</ul>
-<ul>
-<li><p>GUI线程 </p>
+<p>   GUI线程 </p>
 <blockquote>
 <p>绘制用户画面、与js主线程是互斥的）</p>
 </blockquote>
-</li>
-<li><p>js引擎</p>
+<p>   js引擎</p>
 <blockquote>
 <p>线程处于运行状态时，GUI渲染引擎将处于冻结状态 </p>
 </blockquote>
-</li>
-<li><p>http网络请求线程</p>
-</li>
-</ul>
+<p>   http网络请求线程</p>
 <blockquote>
 <p>处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）</p>
 </blockquote>
-<ul>
-<li>浏览器事件处理线程<blockquote>
+<p>   浏览器事件处理线程</p>
+<blockquote>
 <p>   将click、mouse等交互事件发生后讲这些事件放入事件队列中。 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
 </blockquote>
-</li>
-</ul>
+<hr>
+<hr>
+<p>layout: ‘[layout]’<br>title: js<br>date: 2018-06-13 15:30:31</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><h3 id="浏览器常驻的线程-1"><a href="#浏览器常驻的线程-1" class="headerlink" title="浏览器常驻的线程"></a>浏览器常驻的线程</h3><hr>
+<p>js引擎线程</p>
+<blockquote>
+<p> 解释执行js代码、用户输入、网络请求</p>
+</blockquote>
+<p>   GUI线程 </p>
+<blockquote>
+<p>绘制用户画面、与js主线程是互斥的）</p>
+</blockquote>
+<p>   js引擎</p>
+<blockquote>
+<p>线程处于运行状态时，GUI渲染引擎将处于冻结状态 </p>
+</blockquote>
+<p>   http网络请求线程</p>
+<blockquote>
+<p>处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）</p>
+</blockquote>
+<p>   浏览器事件处理线程</p>
+<blockquote>
+<p>   将click、mouse等交互事件发生后讲这些事件放入事件队列中。 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
+</blockquote>
 <hr>
 
           

@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="浏览器常驻的线程  js引擎线程 （解释执行js代码、用户输入、网络请求）  GUI线程 （绘制用户画面、与js主线程是互斥的）   js引擎线程处于运行状态时，GUI渲染引擎将处于冻结状态   http网络请求线程 （处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）">
+<meta name="description" content="浏览器常驻的线程  js引擎线程  解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）   js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态    http网络请求线程    处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js">
 <meta property="og:url" content="http://yoursite.com/2018/06/13/js/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="浏览器常驻的线程  js引擎线程 （解释执行js代码、用户输入、网络请求）  GUI线程 （绘制用户画面、与js主线程是互斥的）   js引擎线程处于运行状态时，GUI渲染引擎将处于冻结状态   http网络请求线程 （处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）">
+<meta property="og:description" content="浏览器常驻的线程  js引擎线程  解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）   js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态    http网络请求线程    处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-06-13T08:01:57.163Z">
+<meta property="og:updated_time" content="2018-06-14T03:19:59.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js">
-<meta name="twitter:description" content="浏览器常驻的线程  js引擎线程 （解释执行js代码、用户输入、网络请求）  GUI线程 （绘制用户画面、与js主线程是互斥的）   js引擎线程处于运行状态时，GUI渲染引擎将处于冻结状态   http网络请求线程 （处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）">
+<meta name="twitter:description" content="浏览器常驻的线程  js引擎线程  解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）   js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态    http网络请求线程    处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入">
 
 
 
@@ -300,18 +300,35 @@
 
       
         <h3 id="浏览器常驻的线程"><a href="#浏览器常驻的线程" class="headerlink" title="浏览器常驻的线程"></a>浏览器常驻的线程</h3><hr>
-<ol>
-<li><p>js引擎线程 （解释执行js代码、用户输入、网络请求）</p>
+<ul>
+<li>js引擎线程<blockquote>
+<p> 解释执行js代码、用户输入、网络请求</p>
+</blockquote>
 </li>
-<li><p>GUI线程 （绘制用户画面、与js主线程是互斥的） </p>
+</ul>
+<ul>
+<li><p>GUI线程 </p>
+<blockquote>
+<p>绘制用户画面、与js主线程是互斥的）</p>
+</blockquote>
 </li>
-<li><p>js引擎线程处于运行状态时，GUI渲染引擎将处于冻结状态 </p>
+<li><p>js引擎</p>
+<blockquote>
+<p>线程处于运行状态时，GUI渲染引擎将处于冻结状态 </p>
+</blockquote>
 </li>
-<li><p>http网络请求线程 （处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）</p>
+<li><p>http网络请求线程</p>
 </li>
-<li><p>浏览器事件处理线程 （讲click、mouse等交互事件发生后讲这些事件放入事件队列中） 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
+</ul>
+<blockquote>
+<p>处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）</p>
+</blockquote>
+<ul>
+<li>浏览器事件处理线程<blockquote>
+<p>   将click、mouse等交互事件发生后讲这些事件放入事件队列中。 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
+</blockquote>
 </li>
-</ol>
+</ul>
 <hr>
 
       
@@ -336,10 +353,6 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/blog/2018/06/13/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
             
           </div>
 
@@ -426,7 +439,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

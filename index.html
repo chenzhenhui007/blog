@@ -442,30 +442,6 @@
 <p>   将click、mouse等交互事件发生后讲这些事件放入事件队列中。 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
 </blockquote>
 <hr>
-<hr>
-<p>layout: ‘[layout]’<br>title: js<br>date: 2018-06-13 15:30:31</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><h3 id="浏览器常驻的线程-1"><a href="#浏览器常驻的线程-1" class="headerlink" title="浏览器常驻的线程"></a>浏览器常驻的线程</h3><hr>
-<p>js引擎线程</p>
-<blockquote>
-<p> 解释执行js代码、用户输入、网络请求</p>
-</blockquote>
-<p>   GUI线程 </p>
-<blockquote>
-<p>绘制用户画面、与js主线程是互斥的）</p>
-</blockquote>
-<p>   js引擎</p>
-<blockquote>
-<p>线程处于运行状态时，GUI渲染引擎将处于冻结状态 </p>
-</blockquote>
-<p>   http网络请求线程</p>
-<blockquote>
-<p>处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）</p>
-</blockquote>
-<p>   浏览器事件处理线程</p>
-<blockquote>
-<p>   将click、mouse等交互事件发生后讲这些事件放入事件队列中。 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
-</blockquote>
-<hr>
 
           
         

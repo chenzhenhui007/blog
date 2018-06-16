@@ -229,6 +229,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/06/16/move/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/06/16/move/" itemprop="url">move</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-16T16:28:55+08:00">
+                2018-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="多物体多值链式运动"><a href="#多物体多值链式运动" class="headerlink" title="多物体多值链式运动"></a>多物体多值链式运动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">//执行</span><br><span class="line">box[1].onclick = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">			move(this,tar, <span class="function"><span class="title">function</span></span>()&#123;move(box[0],tar)&#125; )</span><br><span class="line">		&#125;</span><br><span class="line">//获取属性</span><br><span class="line"><span class="keyword">function</span> getStyle(obj,attr)&#123;</span><br><span class="line">			<span class="keyword">if</span>(obj.currentStyle)&#123;</span><br><span class="line">				<span class="built_in">return</span> obj.currentStyle[attr]</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="built_in">return</span> window.getComputedStyle(obj,<span class="literal">false</span>)[attr]</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">//运行体</span><br><span class="line"><span class="keyword">function</span> move(obj,tar,callBack)&#123;</span><br><span class="line">			clearInterval(obj.sign)</span><br><span class="line">			var speed,</span><br><span class="line">				res</span><br><span class="line"></span><br><span class="line">			obj.sign = setInterval( <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">				var key = <span class="literal">true</span></span><br><span class="line">				console.log(<span class="string">'in'</span>)</span><br><span class="line">				<span class="keyword">for</span>(var prop <span class="keyword">in</span> tar)&#123;</span><br><span class="line">					<span class="keyword">if</span>(prop == <span class="string">'opacity'</span>)&#123;</span><br><span class="line">						res = parseFloat(getStyle(obj,prop))*100</span><br><span class="line">					&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					res = parseInt(getStyle(obj,prop))</span><br><span class="line">				&#125;</span><br><span class="line">					</span><br><span class="line">				</span><br><span class="line">				speed = (tar[prop] - res)/7</span><br><span class="line">				speed = speed&gt;0?Math.ceil(speed):Math.floor(speed)</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span>(prop == <span class="string">'opacity'</span>)&#123;</span><br><span class="line">					obj.style.opacity = (speed + res) / 100</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					obj.style[prop] = speed + res + <span class="string">'px'</span></span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span>(res != tar[prop])&#123;</span><br><span class="line">					key = <span class="literal">false</span></span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(key)&#123;</span><br><span class="line">					clearInterval(obj.sign)</span><br><span class="line">					typeof callBack == <span class="string">'function'</span>?callBack():<span class="string">' '</span></span><br><span class="line">				&#125;</span><br><span class="line">		&#125;,25)</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/06/14/deepCopy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -642,7 +761,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

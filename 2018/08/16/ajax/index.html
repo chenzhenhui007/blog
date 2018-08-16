@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="浏览器常驻的线程 js引擎线程   解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）     js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态      http网络请求线程  处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数">
+<meta name="description" content="ajax12345678910111213141516171819202122例子    $.ajax(&amp;#123;        type:&apos;GET&apos;,        url:&apos;&apos;,        successs:function()&amp;#123;&amp;#125;,  //放函数名后不用添加执行()         error:function()&amp;#123;&amp;#125;    &amp;#125;);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js">
-<meta property="og:url" content="http://yoursite.com/2018/06/13/js轮转片/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/08/16/ajax/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="浏览器常驻的线程 js引擎线程   解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）     js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态      http网络请求线程  处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数">
+<meta property="og:description" content="ajax12345678910111213141516171819202122例子    $.ajax(&amp;#123;        type:&apos;GET&apos;,        url:&apos;&apos;,        successs:function()&amp;#123;&amp;#125;,  //放函数名后不用添加执行()         error:function()&amp;#123;&amp;#125;    &amp;#125;);">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-06-14T03:28:43.999Z">
+<meta property="og:updated_time" content="2018-08-16T15:25:39.613Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js">
-<meta name="twitter:description" content="浏览器常驻的线程 js引擎线程   解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）     js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态      http网络请求线程  处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="ajax12345678910111213141516171819202122例子    $.ajax(&amp;#123;        type:&apos;GET&apos;,        url:&apos;&apos;,        successs:function()&amp;#123;&amp;#125;,  //放函数名后不用添加执行()         error:function()&amp;#123;&amp;#125;    &amp;#125;);">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/13/js轮转片/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/16/ajax/"/>
 
 
 
 
 
-  <title>js | Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/06/13/js轮转片/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/08/16/ajax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-13T15:30:31+08:00">
-                2018-06-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-16T23:25:24+08:00">
+                2018-08-16
               </time>
             
 
@@ -299,29 +299,7 @@
       
 
       
-        <h3 id="浏览器常驻的线程"><a href="#浏览器常驻的线程" class="headerlink" title="浏览器常驻的线程"></a>浏览器常驻的线程</h3><hr>
-<p>js引擎线程</p>
-<blockquote>
-<p> 解释执行js代码、用户输入、网络请求</p>
-</blockquote>
-<p>   GUI线程 </p>
-<blockquote>
-<p>绘制用户画面、与js主线程是互斥的）</p>
-</blockquote>
-<p>   js引擎</p>
-<blockquote>
-<p>线程处于运行状态时，GUI渲染引擎将处于冻结状态 </p>
-</blockquote>
-<p>   http网络请求线程</p>
-<blockquote>
-<p>处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）</p>
-</blockquote>
-<p>   浏览器事件处理线程</p>
-<blockquote>
-<p>   将click、mouse等交互事件发生后讲这些事件放入事件队列中。 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
-</blockquote>
-<hr>
-
+        <h3 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">例子</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        <span class="built_in">type</span>:<span class="string">'GET'</span>,</span><br><span class="line">        url:<span class="string">''</span>,</span><br><span class="line">        successs:<span class="function"><span class="title">function</span></span>()&#123;&#125;,  //放函数名后不用添加执行() </span><br><span class="line">        error:<span class="function"><span class="title">function</span></span>()&#123;&#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br><span class="line">类型    </span><br><span class="line">$.ajax()</span><br><span class="line">    1.type      string类型  get/post</span><br><span class="line">    2.url       string  地址</span><br><span class="line">    3.data      string/object   发送请求的数据</span><br><span class="line">    4.context   上下文</span><br><span class="line">    5.async     ture（默认/<span class="literal">false</span>    是否异步</span><br><span class="line">    6.cache     <span class="literal">true</span>/<span class="literal">false</span>  是否在浏览器缓存加载请求</span><br><span class="line">    7.dataType  返回数据类型</span><br><span class="line">    8.success</span><br><span class="line">    9.error</span><br><span class="line">    10.crossDomain  是否跨域</span><br><span class="line">    11.jsonp    如跨域，设置回调函数</span><br><span class="line">    12.jsonpCallback</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -345,15 +323,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/2018/06/22/jquery/" rel="next" title="jquery">
+                <i class="fa fa-chevron-left"></i> jquery
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2018/06/14/TheHolyGrailMode/" rel="prev" title="TheHolyGrailMode">
-                TheHolyGrailMode <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,7 +445,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器常驻的线程"><span class="nav-number">1.</span> <span class="nav-text">浏览器常驻的线程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax"><span class="nav-number">1.</span> <span class="nav-text">ajax</span></a></li></ol></div>
             
 
           </div>

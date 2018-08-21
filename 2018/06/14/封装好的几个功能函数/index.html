@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="Chinese">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="TheHolyGrailMode    原型继承–圣杯模式最好的原型链共享，互相借用又互不干扰 123456789101112131415function inherit(Origin,Target)&amp;#123;     function F() &amp;#123;&amp;#125;   //中间层     F.prototype = Origin.prototype     Target.prototype">
+<meta property="og:type" content="article">
+<meta property="og:title" content="封装好的几个功能函数">
+<meta property="og:url" content="http://yoursite.com/2018/06/14/封装好的几个功能函数/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="TheHolyGrailMode    原型继承–圣杯模式最好的原型链共享，互相借用又互不干扰 123456789101112131415function inherit(Origin,Target)&amp;#123;     function F() &amp;#123;&amp;#125;   //中间层     F.prototype = Origin.prototype     Target.prototype">
+<meta property="og:locale" content="Chinese">
+<meta property="og:updated_time" content="2018-08-20T01:52:17.986Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="封装好的几个功能函数">
+<meta name="twitter:description" content="TheHolyGrailMode    原型继承–圣杯模式最好的原型链共享，互相借用又互不干扰 123456789101112131415function inherit(Origin,Target)&amp;#123;     function F() &amp;#123;&amp;#125;   //中间层     F.prototype = Origin.prototype     Target.prototype">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/14/封装好的几个功能函数/"/>
+
+
+
+
+
+  <title>封装好的几个功能函数 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Chinese">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/06/14/封装好的几个功能函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">封装好的几个功能函数</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-14T10:20:51+08:00">
+                2018-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="TheHolyGrailMode-原型继承–圣杯模式"><a href="#TheHolyGrailMode-原型继承–圣杯模式" class="headerlink" title="TheHolyGrailMode    原型继承–圣杯模式"></a>TheHolyGrailMode    原型继承–圣杯模式</h3><p>最好的原型链共享，互相借用又互不干扰</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> inherit(Origin,Target)&#123;</span><br><span class="line">     <span class="keyword">function</span> <span class="function"><span class="title">F</span></span>() &#123;&#125;   //中间层</span><br><span class="line">     F.prototype = Origin.prototype</span><br><span class="line">     Target.prototype = new F()</span><br><span class="line">     Origin.prototype.constuctor = Target</span><br><span class="line">     Target.prototype.uber = Origin.prototype</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">Father</span></span>()&#123;&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">Son</span></span>()&#123;&#125;</span><br><span class="line"></span><br><span class="line">inherit(Son,Father)</span><br><span class="line"></span><br><span class="line">var son = new Son()</span><br><span class="line">var father = new Father()</span><br></pre></td></tr></table></figure>
+<h3 id="多物体多值链式运动"><a href="#多物体多值链式运动" class="headerlink" title="多物体多值链式运动"></a>多物体多值链式运动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">//执行</span><br><span class="line">box[1].onclick = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">			move(this,tar, <span class="function"><span class="title">function</span></span>()&#123;move(box[0],tar)&#125; )</span><br><span class="line">		&#125;</span><br><span class="line">//获取属性</span><br><span class="line"><span class="keyword">function</span> getStyle(obj,attr)&#123;</span><br><span class="line">			<span class="keyword">if</span>(obj.currentStyle)&#123;</span><br><span class="line">				<span class="built_in">return</span> obj.currentStyle[attr]</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="built_in">return</span> window.getComputedStyle(obj,<span class="literal">false</span>)[attr]</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">//运行体</span><br><span class="line"><span class="keyword">function</span> move(obj,tar,callBack)&#123;</span><br><span class="line">			clearInterval(obj.sign)</span><br><span class="line">			var speed,</span><br><span class="line">				res</span><br><span class="line"></span><br><span class="line">			obj.sign = setInterval( <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">				var key = <span class="literal">true</span></span><br><span class="line">				console.log(<span class="string">'in'</span>)</span><br><span class="line">				<span class="keyword">for</span>(var prop <span class="keyword">in</span> tar)&#123;</span><br><span class="line">					<span class="keyword">if</span>(prop == <span class="string">'opacity'</span>)&#123;</span><br><span class="line">						res = parseFloat(getStyle(obj,prop))*100</span><br><span class="line">					&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					res = parseInt(getStyle(obj,prop))</span><br><span class="line">				&#125;</span><br><span class="line">					</span><br><span class="line">				</span><br><span class="line">				speed = (tar[prop] - res)/7</span><br><span class="line">				speed = speed&gt;0?Math.ceil(speed):Math.floor(speed)</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span>(prop == <span class="string">'opacity'</span>)&#123;</span><br><span class="line">					obj.style.opacity = (speed + res) / 100</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					obj.style[prop] = speed + res + <span class="string">'px'</span></span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span>(res != tar[prop])&#123;</span><br><span class="line">					key = <span class="literal">false</span></span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(key)&#123;</span><br><span class="line">					clearInterval(obj.sign)</span><br><span class="line">					typeof callBack == <span class="string">'function'</span>?callBack():<span class="string">' '</span></span><br><span class="line">				&#125;</span><br><span class="line">		&#125;,25)</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="深度克隆"><a href="#深度克隆" class="headerlink" title="深度克隆"></a>深度克隆</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> deepCopy(src,tar)&#123;</span><br><span class="line">	var tar = tar || &#123;&#125;		//可传一个参，自建一个空对象来存数据</span><br><span class="line">	<span class="keyword">for</span>(var prop <span class="keyword">in</span> src)&#123;</span><br><span class="line">		<span class="keyword">if</span>(typeof(src[prop])===<span class="string">'object'</span>)&#123;</span><br><span class="line"></span><br><span class="line">			tar[prop] = (Object.prototype.toString.call(src[prop]) ===</span><br><span class="line">			 <span class="string">'[object Array]'</span>?[]:&#123;&#125;)</span><br><span class="line"></span><br><span class="line">			deepCopy(src[prop],tar[prop])</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">			tar[prop]=src[prop]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> tar</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="弹性运动"><a href="#弹性运动" class="headerlink" title="弹性运动"></a>弹性运动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> move(obj,tar)&#123;</span><br><span class="line">			var speed = 40, a, u = 0.8</span><br><span class="line">			clearInterval(obj.sign)</span><br><span class="line">			obj.sign = setInterval(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">			</span><br><span class="line">				a = (tar - obj.offsetLeft) /8</span><br><span class="line">				speed = (speed + a) * u</span><br><span class="line">				ball.style.left = obj.offsetLeft + speed + <span class="string">'px'</span></span><br><span class="line">				</span><br><span class="line">				<span class="keyword">if</span>(Math.abs(speed) &lt; 1 &amp;&amp; Math.abs(tar - obj.offsetLeft) &lt; 1 )&#123;</span><br><span class="line">					ball.style.left = tar + <span class="string">'px'</span></span><br><span class="line">					clearInterval(obj.sign)&#125;</span><br><span class="line">			&#125;,30)</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2018/06/13/js轮转片/" rel="next" title="js线程">
+                <i class="fa fa-chevron-left"></i> js线程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/06/22/jquery/" rel="prev" title="jquery">
+                jquery <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Chen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#TheHolyGrailMode-原型继承–圣杯模式"><span class="nav-number">1.</span> <span class="nav-text">TheHolyGrailMode    原型继承–圣杯模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多物体多值链式运动"><span class="nav-number">2.</span> <span class="nav-text">多物体多值链式运动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度克隆"><span class="nav-number">3.</span> <span class="nav-text">深度克隆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#弹性运动"><span class="nav-number">4.</span> <span class="nav-text">弹性运动</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chen</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -229,6 +229,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/09/23/react/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/09/23/react/" itemprop="url">react</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-23T18:09:01+08:00">
+                2018-09-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="react项目个人心得"><a href="#react项目个人心得" class="headerlink" title="react项目个人心得"></a>react项目个人心得</h3><p>react-router</p>
+<p>快捷键<br>rccp    rsc</p>
+<p>BrowserRouter<br>HashRouter    hash值拼接地址，不需要服务器配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;BrowserRouter&gt;</span><br><span class="line">  &lt;Route path=<span class="string">'/test'</span> component=&#123;Test&#125;/&gt;</span><br><span class="line">&lt;/BrowserRouter&gt;</span><br><span class="line"></span><br><span class="line">多个path放在一个父级下</span><br><span class="line"></span><br><span class="line">inclusive router</span><br><span class="line">exclusive router     </span><br><span class="line">import &#123; BrowserRouter, Route ,Switch &#125; from <span class="string">'react-router-dom'</span>;</span><br><span class="line"></span><br><span class="line">&lt;BrowserRouter&gt;</span><br><span class="line">  &lt;Switch&gt;</span><br><span class="line">    &lt;Route path=<span class="string">'/test'</span> component=&#123;Test&#125;/&gt;</span><br><span class="line">  &lt;/Switch&gt;</span><br><span class="line">&lt;/BrowserRouter&gt;</span><br><span class="line"></span><br><span class="line">switch语法一致  从上往下匹配</span><br><span class="line">exact     强制匹配</span><br><span class="line">&lt;Route path=<span class="string">'/test'</span> exact component=&#123;Test&#125;/&gt;</span><br></pre></td></tr></table></figure>
+<p>重定向 和 404</p>
+<p><route path="/user" exact="" render="{()" ==""> isLogin ? <user> : <redirect to="/login">}/&gt;</redirect></user></route></p>
+<p>iconfont.cn    阿里图标库</p>
+<p>import  ReactDOM from ‘react-dom’</p>
+<p>dom.clientHeight    dom高度</p>
+<h2 id="Herxoku发布"><a href="#Herxoku发布" class="headerlink" title="Herxoku发布"></a>Herxoku发布</h2><p>npm install -g create-react-app<br>create-react-app my-app<br>cd my-app<br>git init<br>heroku create -b <a href="https://github.com/mars/create-react-app-buildpack.git" target="_blank" rel="noopener">https://github.com/mars/create-react-app-buildpack.git</a><br>git add .<br>git commit -m “react-create-app on Heroku”<br>git push heroku master<br>heroku open</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/09/14/BOM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -301,7 +430,9 @@
         
           
             <h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><p>即 browser object model<br>主要处理浏览器窗口（window）和框架（iframe）</p>
-<h2 id="window"><a href="#window" class="headerlink" title="window"></a>window</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">即使访问浏览器窗口的一个接口，又是全局对象。网页中任何对象，变量和函数都是window的属性。</span><br></pre></td></tr></table></figure>
+<h3 id="window"><a href="#window" class="headerlink" title="window"></a>window</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">即使访问浏览器窗口的一个接口，又是全局对象。网页中任何对象，变量和函数都是window的属性。</span><br></pre></td></tr></table></figure>
+<h3 id="BOM归纳"><a href="#BOM归纳" class="headerlink" title="BOM归纳"></a>BOM归纳</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Window     Javascript层级中的顶层对象,表示浏览器窗口</span><br><span class="line">Navigator  包含客户端浏览器的信息</span><br><span class="line">History    包含了浏览器窗口访问过的URL</span><br><span class="line">ocation    包含了当前URL的信息</span><br><span class="line">Screen     包含客户端显示屏的信息</span><br></pre></td></tr></table></figure>
+<h3 id="window对象属性"><a href="#window对象属性" class="headerlink" title="window对象属性"></a>window对象属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">pageXOffset  设值不能实时改变页面</span><br><span class="line">pageYOffset  设置或返回当前页面相对于窗口显示区左上角的Y位置（滚动条位置）</span><br><span class="line"></span><br><span class="line">innerHeight  返回窗口的文档显示区的高度</span><br><span class="line">innerWidth   返回窗口的文档显示区的宽度</span><br><span class="line"></span><br><span class="line">实际应用：懒加载  oageXOffset + innerHeight &gt;= dom.offsetTop</span><br><span class="line">window.onscroll = <span class="function"><span class="title">function</span></span> () &#123;&#125;</span><br><span class="line"></span><br><span class="line">screenX || screenLeft</span><br><span class="line">screenY || screenTop</span><br><span class="line">只读整数,声明了窗口的左上角在屏幕上的的x坐标和Y坐标。IE、 Safari、 Chrome和 opera支持 screenleft</span><br><span class="line">和screenTop,而 Chrome、 Firefox和 safari支持 screenX 和 screenY</span><br><span class="line"></span><br><span class="line">parent  返回父窗口。</span><br><span class="line">self    返回对当前窗口的引用。等价于 Window属性。</span><br><span class="line">top     返回最顶层的先辈窗口。 无法被赋值</span><br><span class="line">name    设置或返回窗口的名称。</span><br><span class="line"></span><br><span class="line">注意此处常用单词属于window对象属性，避免var取名污染</span><br><span class="line"></span><br><span class="line">alert()    显示带有一段消息和一个确认按钮的警告框</span><br><span class="line">confirm()  显示带有一段消息以及确认按钮和取消按钮的对话框。</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1246,7 +1377,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

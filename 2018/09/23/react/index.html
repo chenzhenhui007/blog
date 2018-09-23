@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="浏览器常驻的线程 js引擎线程   解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）     js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态      http网络请求线程  处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数">
+<meta name="description" content="react项目个人心得react-router 快捷键rccp    rsc BrowserRouterHashRouter    hash值拼接地址，不需要服务器配置 12345678910111213141516171819&amp;lt;BrowserRouter&amp;gt;  &amp;lt;Route path=&apos;/test&apos; component=&amp;#123;Test&amp;#125;/&amp;gt;&amp;lt;/Brow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js线程">
-<meta property="og:url" content="http://yoursite.com/2018/06/13/js轮转片/index.html">
+<meta property="og:title" content="react">
+<meta property="og:url" content="http://yoursite.com/2018/09/23/react/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="浏览器常驻的线程 js引擎线程   解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）     js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态      http网络请求线程  处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数">
+<meta property="og:description" content="react项目个人心得react-router 快捷键rccp    rsc BrowserRouterHashRouter    hash值拼接地址，不需要服务器配置 12345678910111213141516171819&amp;lt;BrowserRouter&amp;gt;  &amp;lt;Route path=&apos;/test&apos; component=&amp;#123;Test&amp;#125;/&amp;gt;&amp;lt;/Brow">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-08-20T01:45:43.945Z">
+<meta property="og:updated_time" content="2018-09-23T10:12:50.930Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js线程">
-<meta name="twitter:description" content="浏览器常驻的线程 js引擎线程   解释执行js代码、用户输入、网络请求     GUI线程   绘制用户画面、与js主线程是互斥的）     js引擎  线程处于运行状态时，GUI渲染引擎将处于冻结状态      http网络请求线程  处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数">
+<meta name="twitter:title" content="react">
+<meta name="twitter:description" content="react项目个人心得react-router 快捷键rccp    rsc BrowserRouterHashRouter    hash值拼接地址，不需要服务器配置 12345678910111213141516171819&amp;lt;BrowserRouter&amp;gt;  &amp;lt;Route path=&apos;/test&apos; component=&amp;#123;Test&amp;#125;/&amp;gt;&amp;lt;/Brow">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/13/js轮转片/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/23/react/"/>
 
 
 
 
 
-  <title>js线程 | Hexo</title>
+  <title>react | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/06/13/js轮转片/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/09/23/react/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js线程</h1>
+          <h1 class="post-title" itemprop="name headline">react</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-13T15:30:31+08:00">
-                2018-06-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-23T18:09:01+08:00">
+                2018-09-23
               </time>
             
 
@@ -299,28 +299,16 @@
       
 
       
-        <h3 id="浏览器常驻的线程"><a href="#浏览器常驻的线程" class="headerlink" title="浏览器常驻的线程"></a>浏览器常驻的线程</h3><hr>
-<p>js引擎线程</p>
-<blockquote>
-<p> 解释执行js代码、用户输入、网络请求</p>
-</blockquote>
-<p>   GUI线程 </p>
-<blockquote>
-<p>绘制用户画面、与js主线程是互斥的）</p>
-</blockquote>
-<p>   js引擎</p>
-<blockquote>
-<p>线程处于运行状态时，GUI渲染引擎将处于冻结状态 </p>
-</blockquote>
-<p>   http网络请求线程</p>
-<blockquote>
-<p>处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）</p>
-</blockquote>
-<p>   浏览器事件处理线程</p>
-<blockquote>
-<p>   将click、mouse等交互事件发生后讲这些事件放入事件队列中。 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
-</blockquote>
-<hr>
+        <h3 id="react项目个人心得"><a href="#react项目个人心得" class="headerlink" title="react项目个人心得"></a>react项目个人心得</h3><p>react-router</p>
+<p>快捷键<br>rccp    rsc</p>
+<p>BrowserRouter<br>HashRouter    hash值拼接地址，不需要服务器配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;BrowserRouter&gt;</span><br><span class="line">  &lt;Route path=<span class="string">'/test'</span> component=&#123;Test&#125;/&gt;</span><br><span class="line">&lt;/BrowserRouter&gt;</span><br><span class="line"></span><br><span class="line">多个path放在一个父级下</span><br><span class="line"></span><br><span class="line">inclusive router</span><br><span class="line">exclusive router     </span><br><span class="line">import &#123; BrowserRouter, Route ,Switch &#125; from <span class="string">'react-router-dom'</span>;</span><br><span class="line"></span><br><span class="line">&lt;BrowserRouter&gt;</span><br><span class="line">  &lt;Switch&gt;</span><br><span class="line">    &lt;Route path=<span class="string">'/test'</span> component=&#123;Test&#125;/&gt;</span><br><span class="line">  &lt;/Switch&gt;</span><br><span class="line">&lt;/BrowserRouter&gt;</span><br><span class="line"></span><br><span class="line">switch语法一致  从上往下匹配</span><br><span class="line">exact     强制匹配</span><br><span class="line">&lt;Route path=<span class="string">'/test'</span> exact component=&#123;Test&#125;/&gt;</span><br></pre></td></tr></table></figure>
+<p>重定向 和 404</p>
+<p><route path="/user" exact="" render="{()" ==""> isLogin ? <user> : <redirect to="/login">}/&gt;</redirect></user></route></p>
+<p>iconfont.cn    阿里图标库</p>
+<p>import  ReactDOM from ‘react-dom’</p>
+<p>dom.clientHeight    dom高度</p>
+<h2 id="Herxoku发布"><a href="#Herxoku发布" class="headerlink" title="Herxoku发布"></a>Herxoku发布</h2><p>npm install -g create-react-app<br>create-react-app my-app<br>cd my-app<br>git init<br>heroku create -b <a href="https://github.com/mars/create-react-app-buildpack.git" target="_blank" rel="noopener">https://github.com/mars/create-react-app-buildpack.git</a><br>git add .<br>git commit -m “react-create-app on Heroku”<br>git push heroku master<br>heroku open</p>
 
       
     </div>
@@ -345,15 +333,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/2018/09/14/BOM/" rel="next" title="BOM">
+                <i class="fa fa-chevron-left"></i> BOM
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2018/06/14/封装好的几个功能函数/" rel="prev" title="封装好的几个功能函数">
-                封装好的几个功能函数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,7 +455,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器常驻的线程"><span class="nav-number">1.</span> <span class="nav-text">浏览器常驻的线程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#react项目个人心得"><span class="nav-number">1.</span> <span class="nav-text">react项目个人心得</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Herxoku发布"><span class="nav-number"></span> <span class="nav-text">Herxoku发布</span></a></div>
             
 
           </div>

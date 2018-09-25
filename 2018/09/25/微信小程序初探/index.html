@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="BOM即 browser object model主要处理浏览器窗口（window）和框架（iframe） window1即使访问浏览器窗口的一个接口，又是全局对象。网页中任何对象，变量和函数都是window的属性。 BOM归纳12345Window     Javascript层级中的顶层对象,表示浏览器窗口Navigator  包含客户端浏览器的信息History    包含了浏览器窗口访问过">
+<meta name="description" content="微信小程序 直接对数据进行绑定 ， 不同html没有dom 组件化 模板  wxml12view属性hover-class=&amp;quot;hover&amp;quot;     按住或点击触发 wxss没有通配符选择器，大致与css相同">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BOM">
-<meta property="og:url" content="http://yoursite.com/2018/09/14/BOM/index.html">
+<meta property="og:title" content="微信小程序初探">
+<meta property="og:url" content="http://yoursite.com/2018/09/25/微信小程序初探/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="BOM即 browser object model主要处理浏览器窗口（window）和框架（iframe） window1即使访问浏览器窗口的一个接口，又是全局对象。网页中任何对象，变量和函数都是window的属性。 BOM归纳12345Window     Javascript层级中的顶层对象,表示浏览器窗口Navigator  包含客户端浏览器的信息History    包含了浏览器窗口访问过">
+<meta property="og:description" content="微信小程序 直接对数据进行绑定 ， 不同html没有dom 组件化 模板  wxml12view属性hover-class=&amp;quot;hover&amp;quot;     按住或点击触发 wxss没有通配符选择器，大致与css相同">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-09-23T10:09:44.654Z">
+<meta property="og:updated_time" content="2018-09-25T11:13:39.362Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BOM">
-<meta name="twitter:description" content="BOM即 browser object model主要处理浏览器窗口（window）和框架（iframe） window1即使访问浏览器窗口的一个接口，又是全局对象。网页中任何对象，变量和函数都是window的属性。 BOM归纳12345Window     Javascript层级中的顶层对象,表示浏览器窗口Navigator  包含客户端浏览器的信息History    包含了浏览器窗口访问过">
+<meta name="twitter:title" content="微信小程序初探">
+<meta name="twitter:description" content="微信小程序 直接对数据进行绑定 ， 不同html没有dom 组件化 模板  wxml12view属性hover-class=&amp;quot;hover&amp;quot;     按住或点击触发 wxss没有通配符选择器，大致与css相同">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/14/BOM/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/25/微信小程序初探/"/>
 
 
 
 
 
-  <title>BOM | Hexo</title>
+  <title>微信小程序初探 | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/09/14/BOM/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/09/25/微信小程序初探/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">BOM</h1>
+          <h1 class="post-title" itemprop="name headline">微信小程序初探</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-14T17:08:00+08:00">
-                2018-09-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-25T19:13:30+08:00">
+                2018-09-25
               </time>
             
 
@@ -299,10 +299,14 @@
       
 
       
-        <h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><p>即 browser object model<br>主要处理浏览器窗口（window）和框架（iframe）</p>
-<h3 id="window"><a href="#window" class="headerlink" title="window"></a>window</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">即使访问浏览器窗口的一个接口，又是全局对象。网页中任何对象，变量和函数都是window的属性。</span><br></pre></td></tr></table></figure>
-<h3 id="BOM归纳"><a href="#BOM归纳" class="headerlink" title="BOM归纳"></a>BOM归纳</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Window     Javascript层级中的顶层对象,表示浏览器窗口</span><br><span class="line">Navigator  包含客户端浏览器的信息</span><br><span class="line">History    包含了浏览器窗口访问过的URL</span><br><span class="line">ocation    包含了当前URL的信息</span><br><span class="line">Screen     包含客户端显示屏的信息</span><br></pre></td></tr></table></figure>
-<h3 id="window对象属性"><a href="#window对象属性" class="headerlink" title="window对象属性"></a>window对象属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">pageXOffset  设值不能实时改变页面</span><br><span class="line">pageYOffset  设置或返回当前页面相对于窗口显示区左上角的Y位置（滚动条位置）</span><br><span class="line"></span><br><span class="line">innerHeight  返回窗口的文档显示区的高度</span><br><span class="line">innerWidth   返回窗口的文档显示区的宽度</span><br><span class="line"></span><br><span class="line">实际应用：懒加载  oageXOffset + innerHeight &gt;= dom.offsetTop</span><br><span class="line">window.onscroll = <span class="function"><span class="title">function</span></span> () &#123;&#125;</span><br><span class="line"></span><br><span class="line">screenX || screenLeft</span><br><span class="line">screenY || screenTop</span><br><span class="line">只读整数,声明了窗口的左上角在屏幕上的的x坐标和Y坐标。IE、 Safari、 Chrome和 opera支持 screenleft</span><br><span class="line">和screenTop,而 Chrome、 Firefox和 safari支持 screenX 和 screenY</span><br><span class="line"></span><br><span class="line">parent  返回父窗口。</span><br><span class="line">self    返回对当前窗口的引用。等价于 Window属性。</span><br><span class="line">top     返回最顶层的先辈窗口。 无法被赋值</span><br><span class="line">name    设置或返回窗口的名称。</span><br><span class="line"></span><br><span class="line">注意此处常用单词属于window对象属性，避免var取名污染</span><br><span class="line"></span><br><span class="line">alert()    显示带有一段消息和一个确认按钮的警告框</span><br><span class="line">confirm()  显示带有一段消息以及确认按钮和取消按钮的对话框。</span><br></pre></td></tr></table></figure>
+        <h3 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h3><ul>
+<li>直接对数据进行绑定 ， 不同html没有dom</li>
+<li>组件化</li>
+<li>模板</li>
+</ul>
+<h4 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">view属性</span><br><span class="line">hover-class=&quot;hover&quot;     按住或点击触发</span><br></pre></td></tr></table></figure>
+<h4 id="wxss"><a href="#wxss" class="headerlink" title="wxss"></a>wxss</h4><p>没有通配符选择器，大致与css相同</p>
+
       
     </div>
     
@@ -326,8 +330,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/08/24/前端算法/" rel="next" title="前端算法">
-                <i class="fa fa-chevron-left"></i> 前端算法
+              <a href="/blog/2018/09/23/react/" rel="next" title="react">
+                <i class="fa fa-chevron-left"></i> react
               </a>
             
           </div>
@@ -335,10 +339,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2018/09/23/react/" rel="prev" title="react">
-                react <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -452,7 +452,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BOM"><span class="nav-number">1.</span> <span class="nav-text">BOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#window"><span class="nav-number">1.1.</span> <span class="nav-text">window</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BOM归纳"><span class="nav-number">1.2.</span> <span class="nav-text">BOM归纳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#window对象属性"><span class="nav-number">1.3.</span> <span class="nav-text">window对象属性</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#微信小程序"><span class="nav-number">1.</span> <span class="nav-text">微信小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#wxml"><span class="nav-number">1.1.</span> <span class="nav-text">wxml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wxss"><span class="nav-number">1.2.</span> <span class="nav-text">wxss</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -229,6 +229,141 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/09/27/Html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/09/27/Html/" itemprop="url">Html</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-27T18:10:01+08:00">
+                2018-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>a</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1. &lt;a href=&quot;http:\\www.taobao.com&quot; target=&quot;_blank&quot;&gt;淘宝网&lt;/a&gt;</span><br><span class="line">target=&quot;_blank&quot;  此参指新页面打开  </span><br><span class="line">其余参数：</span><br><span class="line">_blank</span><br><span class="line">_parent</span><br><span class="line">_self</span><br><span class="line">_top</span><br><span class="line">framename</span><br><span class="line"></span><br><span class="line">2. &lt;a href=&quot;#other&quot;&gt;翻页到其他地方&lt;/a&gt;  href=&quot;#&quot;对应name</span><br><span class="line">&lt;a name=&quot;other&quot;&gt;Chapter 4&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">3. 伪协议 </span><br><span class="line">&lt;a href=&quot;tel:18667047218&quot;&gt;Call me&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;javascript:;&quot;&gt;可添js代码&lt;/a&gt;</span><br><span class="line">以下不再举例     mail:    file:</span><br></pre></td></tr></table></figure></p>
+<html><br><em>em标签   ， 斜体</em><br><br><del>del标签 ， 中划线</del><br><address>address，地址标签，独占一行</address><br><div>div ， 独占一行，捆绑操作</div><br><span>span</span><br><br>br ， 标签回车作用 <br><br><p>h1  标题标签，最多六个：三个功能。1独成一段，2加粗，3更改字体大小</p><br>img src=”” style=”width: 500px;” alt=”图片占位符” title=”图片提示符”<p></p><br>src 三种路径1.绝对路径 2.相对路径（html与图片在同文件夹下） 3.网上url<p></p><br>ul 无序列表（type dics实心圆，square方块，circle圈）<p><br></p></html>
+
+<p><strong>input type</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">button  checkbox    file</span><br><span class="line">hidden  image   password</span><br><span class="line">radio   resetsubmit text</span><br><span class="line">选项默认选中，checked=&quot;checked&quot;</span><br></pre></td></tr></table></figure>
+<html><br><select name="Province"><br>        <option>beijing</option><br>        <option>shanghai</option><br>        <option>tianjin</option><br>    </select><br></html>
+
+<pre><code>&lt;p&gt;下拉选项，select &gt; option&lt;/p&gt;
+&lt;p&gt;option内容默认为value属性值&lt;/p&gt;
+</code></pre><h4 id="行级块元素"><a href="#行级块元素" class="headerlink" title="行级块元素"></a>行级块元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1.行级元素:inline    </span><br><span class="line">行级元素内容决定元素所占位置，不可以通过css改变宽高</span><br><span class="line">span   strong  em  a   del</span><br><span class="line"></span><br><span class="line">2.块级元素:block</span><br><span class="line">独占一行，可以通过css改变宽高</span><br><span class="line">div p ul li ol form address</span><br><span class="line"></span><br><span class="line">3.行级块元素:inline-block</span><br><span class="line">行级块元素feature:内容决定元素所占位置，可以通过css改变宽高</span><br><span class="line">img</span><br><span class="line"></span><br><span class="line">凡是带有inline的元素，都有文字特性。有文字分隔符</span><br><span class="line">行级元素只能嵌套行级元素 （p标签不能套块级元素，a标签不能套a标签）</span><br><span class="line">块级元素可以嵌套任何元素</span><br></pre></td></tr></table></figure>
+<h4 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">id选择器 #ID的值 一对一</span><br><span class="line">class选择器 .class的值 多对多（div claas=“demo demo1”）</span><br><span class="line">标签选择器 div&#123;&#125; em&#123;&#125; , 多用于初始化标签样式</span><br><span class="line">通配符选择器 *&#123;&#125;</span><br><span class="line">属性选择器 【属性】 ， 【属性=属性值】</span><br><span class="line">父子选择器/派生选择器 div span&#123;&#125;</span><br><span class="line">直接子元素选择器 div &gt; span&#123;&#125; 只作用于子目录下的标签</span><br><span class="line">并列选择器 div.span 不加空格</span><br><span class="line">分组选择器 em，strong，span&#123;&#125;</span><br><span class="line">多个选择器是从右往左查找排查</span><br></pre></td></tr></table></figure>
+<h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">text_decoration：none；</span><br><span class="line">文字样式清空</span><br><span class="line"></span><br><span class="line">list-style</span><br><span class="line">li样式</span><br><span class="line"></span><br><span class="line">font-size</span><br><span class="line">字体大小</span><br><span class="line"></span><br><span class="line">font-family</span><br><span class="line">设置字体：italic 苹果用的字体</span><br><span class="line"></span><br><span class="line">line-height:</span><br><span class="line">单行文本高度 等同于容器即垂直居中</span><br><span class="line"></span><br><span class="line">text-indent:2em</span><br><span class="line">缩进两个文本单位 首行缩进</span><br><span class="line"></span><br><span class="line">cursor:pointer;</span><br><span class="line">设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。链接手</span><br><span class="line"></span><br><span class="line">body 默认margin值为8px</span><br><span class="line"></span><br><span class="line">opacity:0.5</span><br><span class="line">透明度0~1</span><br><span class="line"></span><br><span class="line">text-overflow:ellipsis;  文字超出打点显示</span><br><span class="line">white-space:nowarp; 不换行</span><br><span class="line">overfloe:hidden;    超出隐藏</span><br><span class="line"></span><br><span class="line">伪元素：可以被css操作但是没有html结构</span><br><span class="line">伪元素天生有两个结构 </span><br><span class="line">span：：before&#123;connent：“”；&#125;</span><br><span class="line">span：：after&#123;connent：“”；&#125;</span><br><span class="line"></span><br><span class="line">background-image:url();</span><br><span class="line">background-size:100px 100px;图片size</span><br><span class="line">background-repeat:no-repeat;不铺满div，单个显示</span><br><span class="line">background-position:center center;居中显示，也可以用百分号或者像素。</span><br></pre></td></tr></table></figure>
+<h4 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">position：absolute</span><br><span class="line">1.可定位 跟上 left或者top </span><br><span class="line">2.脱离原来位置定位</span><br><span class="line">3.相对于最近的有定位的父级进行定位，反则相对于文档定位</span><br><span class="line"></span><br><span class="line">psdition：relative</span><br><span class="line">保留原来位置定位2.相对于自己原来的位置进行定位</span><br><span class="line"></span><br><span class="line">position:fixed</span><br><span class="line">固定定位</span><br></pre></td></tr></table></figure>
+<h4 id="bfc"><a href="#bfc" class="headerlink" title="bfc"></a>bfc</h4><blockquote>
+<p>改变容器的渲染规则，多用于margin塌陷的几种解决方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.设为浮动元素</span><br><span class="line">2.为父盒子设置border</span><br><span class="line">3.为父盒子添加overflow：hidden；</span><br><span class="line">4.为父盒子设定padding值；</span><br><span class="line">5.为父盒子添加position：fixed；</span><br><span class="line"></span><br><span class="line">清除浮动</span><br><span class="line">:after &#123;  display: block; </span><br><span class="line">          content: &quot;.&quot;; </span><br><span class="line">          clear: both; &#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/09/25/微信小程序初探/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1059,7 +1194,7 @@
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">同一盒子，可以同时加多个阴影，阴影之间用“,”隔开</span><br><span class="line">.box_shadow&#123;</span><br><span class="line">    box-shadow:4px 2px 6px #f00, -4px -2px 6px #000, 0px 0px 12px 5px #33CC00 inset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>text-showdow</strong></p>
-<html><br><span style="text-shadow: 5px 5px 1px #0ff;"><p></p>文本阴影text-shadow<br></span><p></p><br><strong>渐变的背景颜色 Gradient</strong><br><p></p><br><div style="width: 300px;height: 300px;background:linear-gradient(35deg,#789456 25%,#147852 50%,red 75%,orange 100%);"></div><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;width: 300px;height: 300px;background:linear-gradient</span><br><span class="line">(35deg,#789456 25%,#147852 50%,red 75%,orange 100%);&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br><br><div style="width: 300px;height: 300px;background:radial-gradient(circle 100px at center,#779 10%,#147852 50%,red 75%,orange 100%);"></div><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;width: 300px;height: 300px;background:radial-gradient</span><br><span class="line">(circle 100px at center,#779 10%,#147852 50%,red 75%,orange 100%);&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br><br></html>
+<html><br><span style="text-shadow: 5px 5px 1px #0ff;"><p></p>文本阴影text-shadow<br></span><p>text-shadow: 5px 5px 1px #0ff；四个参数：x y 模糊程度  颜色</p>blur  可选,模糊的距离。<p></p><br><strong>渐变的背景颜色 Gradient</strong><br><p></p><br><div style="width: 300px;height: 300px;background:linear-gradient(35deg,#789456 25%,#147852 50%,red 75%,orange 100%);"></div><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;width: 300px;height: 300px;background:linear-gradient</span><br><span class="line">(35deg,#789456 25%,#147852 50%,red 75%,orange 100%);&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br><br><div style="width: 300px;height: 300px;background:radial-gradient(circle 100px at center,#779 10%,#147852 50%,red 75%,orange 100%);"></div><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;width: 300px;height: 300px;background:radial-gradient</span><br><span class="line">(circle 100px at center,#779 10%,#147852 50%,red 75%,orange 100%);&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br><br></html>
 
 
 
@@ -1354,151 +1489,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/06/13/js/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/06/13/js/" itemprop="url">JS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-13T15:30:31+08:00">
-                2018-06-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="浏览器常驻的线程"><a href="#浏览器常驻的线程" class="headerlink" title="浏览器常驻的线程"></a>浏览器常驻的线程</h3><hr>
-<p>js引擎线程</p>
-<blockquote>
-<p> 解释执行js代码、用户输入、网络请求</p>
-</blockquote>
-<p>   GUI线程 </p>
-<blockquote>
-<p>绘制用户画面、与js主线程是互斥的）</p>
-</blockquote>
-<p>   js引擎</p>
-<blockquote>
-<p>线程处于运行状态时，GUI渲染引擎将处于冻结状态 </p>
-</blockquote>
-<p>   http网络请求线程</p>
-<blockquote>
-<p>处理用户的get、post等请求，等返回结果后将回调函数推入任务队列）  定时触发器线程 （setTimeout、setInterval等待时间结束后把执行函数推入任务队列中）</p>
-</blockquote>
-<p>   浏览器事件处理线程</p>
-<blockquote>
-<p>   将click、mouse等交互事件发生后讲这些事件放入事件队列中。 队列  先进先出（栈相反，先进后出 执行机制 * 单线程-同一时间只能做一件事  基于单线程运行，同时又可以异步执行</p>
-</blockquote>
-<hr>
-<h3 id="JS与Jquery"><a href="#JS与Jquery" class="headerlink" title="JS与Jquery"></a>JS与Jquery</h3><p>原生js方法获取dom   jq获取dom方式是jq对象</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1542,7 +1539,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
